@@ -3,7 +3,7 @@ project:
   title: "tt-td04" # Project title
   author: "KATO, Jinnosuke" # Your name
   discord: "" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description: "" # One line description of what your project does
+  description: "A 4bit toy CPU TD4 from CPUの創り方" # One line description of what your project does
   language: "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz: 0 # Clock frequency in Hz (or 0 if not applicable)
 
@@ -24,34 +24,34 @@ project:
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "Load: OpCode(0) / Read: NC / Exe: Input(0)"
+  ui[1]: "Load: OpCode(1) / Read: NC / Exe: Input(1)"
+  ui[2]: "Load: OpCode(2) / Read: NC / Exe: Input(2)"
+  ui[3]: "Load: OpCode(3) / Read: NC / Exe: Input(3)"
+  ui[4]: "Always: NC"
+  ui[5]: "Always: NC"
+  ui[6]: "Load: Read / Read: Read / Exe: NC"
+  ui[7]: "Always: Load"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "Load: NC / Read: OpCode(0) / Exe: RegA(0)"
+  uo[1]: "Load: NC / Read: OpCode(1) / Exe: RegA(1)"
+  uo[2]: "Load: NC / Read: OpCode(2) / Exe: RegA(2)"
+  uo[3]: "Load: NC / Read: OpCode(3) / Exe: RegA(3)"
+  uo[4]: "Load: NC / Read: Immediate(0) / Exe: RegB(0)"
+  uo[5]: "Load: NC / Read: Immediate(0) / Exe: RegB(1)"
+  uo[6]: "Load: NC / Read: Immediate(0) / Exe: RegB(2)"
+  uo[7]: "Load: NC / Read: Immediate(0) / Exe: RegB(3)"
 
   # Bidirectional pins
-  uio[0]: ""
-  uio[1]: ""
-  uio[2]: ""
-  uio[3]: ""
-  uio[4]: ""
-  uio[5]: ""
-  uio[6]: ""
-  uio[7]: ""
+  uio[0]: "Load: Immediate(0) / Read: NC / Exe: Output(0)"
+  uio[1]: "Load: Immediate(1) / Read: NC / Exe: Output(1)"
+  uio[2]: "Load: Immediate(2) / Read: NC / Exe: Output(2)"
+  uio[3]: "Load: Immediate(3) / Read: NC / Exe: Output(3)"
+  uio[4]: "Load: Address(0) / Read: Address(0)/ Exe: NC"
+  uio[5]: "Load: Address(1) / Read: Address(1)/ Exe: NC"
+  uio[6]: "Load: Address(2) / Read: Address(2)/ Exe: NC"
+  uio[7]: "Load: Address(3) / Read: Address(3)/ Exe: Carry"
 
 # Do not change!
 yaml_version: 6
