@@ -34,7 +34,9 @@ async def test_project(dut):
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 1)
 
-    dut.ui_in.value = 0b1010_1010 # opcode=0101←書き込まれない/読み込みモード
+    dut.ui_in.value = 0b1100_1010 # opcode=0101←書き込まれない/読み込みモード
+
+    await ClockCycles(dut.clk, 1)
 
     # The following assersion is just an example of how to check the output values.
     # Change it to match the actual expected output of your module:
