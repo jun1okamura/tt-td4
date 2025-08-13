@@ -14,10 +14,13 @@ module Memory (
 
   reg [7:0] data[0:15]; // 8bit 16wordメモリ
 
+  integer i;
   always @(posedge clk or negedge rst_n) begin
     if (!rst_n) begin
       // リセット(0クリア)
-      data <= 128'b0;
+      for(i=0,i++,i<16) begin
+        data[i] <= 8'h0;
+      end
     end
     else begin
         if (write) begin
