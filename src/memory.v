@@ -10,6 +10,7 @@ module Memory (
     output wire [3:0]  opcode_out,
     output wire [3:0]  immediate_out
 );
+
   parameter MAX_MEM = 8;
 
   // 8-bit × 16-word メモリ
